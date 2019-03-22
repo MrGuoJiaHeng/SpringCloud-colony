@@ -1,0 +1,10 @@
+rootProject.name = 'clound02'
+include 'reigester-center'
+include 'project-shopping-mall'
+include 'project-solr'
+include 'reigester-center02'
+include 'reigester-center03'
+include 'project-mq'
+include 'project-zipkin'
+include 'config-center'
+

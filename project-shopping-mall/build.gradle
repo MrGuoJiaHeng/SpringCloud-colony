@@ -1,0 +1,14 @@
+
+dependencies {
+//    加入thymeleaf组件
+    compile "org.springframework.boot:spring-boot-starter-thymeleaf"
+    //eureka的客户端组件
+    compile "org.springframework.cloud:spring-cloud-starter-eureka"
+    compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
+    compile 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+//    熔断器
+    compile 'org.springframework.cloud:spring-cloud-starter-hystrix'
+//    分布式配置客户端依赖
+    compile 'org.springframework.cloud:spring-cloud-starter-config'
+
+}

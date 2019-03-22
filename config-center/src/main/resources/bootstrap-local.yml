@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-center
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://gitlab.com/MrGuoJiaHeng/SpringCloud-Config.git #项目路径
+          clone-on-start: true #表示启动时会clone到本地
+          search-paths: local #若有多个文件夹，表示从那个文件夹寻找
+          username: MrGuoJiaHeng
+          password: TANGFENGYANGV587

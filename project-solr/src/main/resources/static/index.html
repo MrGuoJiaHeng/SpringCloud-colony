@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/axios.js" type="text/javascript"></script>
+    <script src="js/vue.js" type="text/javascript"></script>
+</head>
+<body>
+<table border="1" id="prodect">
+    <tr>
+        <th>商品编号</th>
+        <th>商品名称</th>
+        <th>操作</th>
+    </tr>
+    <tr v-for="p in products">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td @click="prodectdel(p.id)">删除</td>
+    </tr>
+</table>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/Myscript.js" type="text/javascript"></script>
+</body>
+</html>

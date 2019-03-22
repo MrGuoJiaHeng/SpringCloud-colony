@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: project-ProjectSolrProvider
+  cloud:
+    config:
+      uri: http://localhost:8888

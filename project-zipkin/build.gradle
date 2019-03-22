@@ -1,0 +1,5 @@
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'io.zipkin.java:zipkin-server'
+    compile 'io.zipkin.java:zipkin-autoconfigure-ui'
+}

@@ -1,0 +1,16 @@
+server:
+  port: 7700
+spring:
+   application:
+      name: project-zipkin
+
+eureka:
+  client:
+    service-url:
+        defaultZone: http://localhost:8881/eureka/,http://localhost:8882/eureka/,http://localhost:8883/eureka/ #eureka注册服务端id
+      #defaultZone: http://129.204.113.113:8000/eureka/ #eureka注册服务端id
+  instance:
+    prefer-ip-address: true #以ip形式注册
+logging:
+  level: info
+  path: F:\question\springcloud\clound02\loggin\project-zipkin

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.4.2.min.js"></script>
+    <script src="js/amq_jquery_adapter.js" type="text/javascript"></script>
+    <script src="js/amq.js" type="text/javascript"></script>
+</head>
+<body>
+消息:<input type="text" id="msg">
+<input type="button" onclick="submit()" value="提交">
+<script>
+
+
+    function showInfo(str) {
+        console.log(str)
+    }
+
+    showInfo("start");
+
+    var amq = org.activemq.Amq;
+    amq.init({
+        uri: 'amq',
+        logging: true,
+        timeout: 20
+    });
+
+    var myHandler = {
+        rcvMessage: function (message) {
+            console.log(message);
+            //chrome
+            showInfo("取到的值:q1----" + message.textContent);
+
+        }
+    };
+
+    var destination = "channel://q1";
+    amq.addListener(1, destination, myHandler.rcvMessage);
+
+
+    function submit() {
+        var msg = $('#msg').val()
+        // $.get("/seedMsg", {"msgCount": "q1", "msg": msg}, function (data) {
+        // })
+        var destination = "channel://q1";
+        amq.sendMessage(destination, msg, "amq-msg-type='text'");
+        showInfo("存入的消息:" + msg);
+    }
+</script>
+</body>
+</html>
